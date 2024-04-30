@@ -1,0 +1,257 @@
+.Headersection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6aeec6;
+    color: hsl(0, 0%, 100%);
+    padding: 10px 0px;
+}
+
+.LogoItem h2 {
+    margin: 0;
+    color: #ef6f40;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: -20px;
+}
+
+.Navbarlinks ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    float: right;
+}
+
+.Navbarlinks ul li {
+    margin-right: 1rem;
+}
+
+.Navbarlinks ul li a {
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 18px;
+    color: #ef6f40;
+}
+
+.Navbarlinks ul li a:hover {
+    color: #4dc7f2;
+    border-bottom: 1px solid;
+}
+
+.formsection ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.formsection ul li {
+    margin-right: 1rem;
+}
+
+.formsection ul li a {
+    text-decoration: none;
+    color: #ef6f40;
+}
+
+.formsection ul li a:hover {
+    color: #4dc7f2;
+    border-bottom: 1px solid;
+}
+
+.Showsection {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.Showsection.active .span1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.Showsection.active .span2 {
+    opacity: 0;
+}
+
+.Showsection.active .span3 {
+    transform: rotate(45deg) translate(-12px, -8px);
+}
+
+.span1,
+.span2,
+.span3 {
+    width: 37px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.userInfo button {
+    background-color: #09c03f;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 13px;
+    border-radius: 1px;
+
+}
+
+.userInfo button:hover {
+    background-color: #ef6f40;
+}
+
+.Navbarlinks .userInfo button {
+    display: none;
+}
+
+.darkModeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.darkModefame {
+    display: none;
+}
+
+
+
+/* UserProfile.module.css */
+.UserProfile {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: linear-gradient(-60deg, #ef6f4065, #4dc6f275);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.UserProfile h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.UserProfile form {
+    display: grid;
+    gap: 10px;
+
+}
+
+.UserProfile label {
+    font-weight: bold;
+}
+
+.UserProfile input {
+    width: 100%;
+    padding: 10px 0px 10px 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ef6f40;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.UserProfile button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ef6f40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.UserProfile button:hover {
+    background: linear-gradient(40deg, #ef6f40, #4dc7f2);
+}
+
+@media (max-width: 600px) {
+    .Navbarlinks ul {
+        display: none;
+    }
+
+    .Navbarlinks .userInfo button {
+        display: block;
+    }
+
+    .darkModefame {
+        display: block;
+        position: absolute;
+        left: 58%;
+        top: 25px;
+    }
+
+    .userInfo {
+        display: block;
+    }
+
+    .Navbarlinks.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #6bedc5;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        width: 100%;
+        z-index: 999999;
+        padding-top: 15px;
+    }
+
+    .Navbarlinks.active ul li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    button.darkModeButton {
+        position: absolute;
+        left: 50%;
+        top: -42px;
+    }
+
+    .formsection ul {
+        display: none;
+    }
+
+    .formsection ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .formsection ul li a {
+        color: #ef6f40;
+    }
+
+    .Showsection {
+        display: flex;
+        position: absolute;
+        top: 18px;
+        right: 30px;
+    }
+
+    .Headersection {
+        padding: 21px 0px;
+    }
+
+    .formsection ul {
+        display: none;
+    }
+
+}
