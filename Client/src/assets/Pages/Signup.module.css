@@ -9,12 +9,46 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
+.headersectionsignup {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.signupForm2 {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.signupForm2 {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(-60deg, #ef6f4065, #4dc6f275);
+}
+
 .signupForm {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
     padding: 20px;
     background: linear-gradient(-60deg, #ef6f4065, #4dc6f275);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    z-index: 9999999;
+}
+
+.signupForm2 h2 {
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 10px;
 }
 
 .signupForm h2 {
@@ -30,6 +64,13 @@
     font-size: 15px;
 }
 
+.signupForm2 label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 15px;
+}
+
 .checkboxitem {
     display: flex;
     left: 0px;
@@ -39,6 +80,18 @@
 .checkboxitem input[type="checkbox"] {
     margin-bottom: 10px;
     border: 1px solid;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.signupForm2 input[type="text"],
+.signupForm2 input[type="tel"],
+.signupForm2 input[type="email"],
+.signupForm2 input[type="password"] {
+    width: 100%;
+    padding: 10px 0px 10px 3px;
+    margin-bottom: 10px;
+    border: 1px solid #ef6f40;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -65,7 +118,21 @@
     cursor: pointer;
 }
 
+.signupForm2 button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6a0093;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .signupForm button:hover {
+    background: linear-gradient(40deg, #ef6f40, #4dc7f2);
+}
+
+.signupForm2 button:hover {
     background: linear-gradient(40deg, #ef6f40, #4dc7f2);
 }
 
@@ -77,4 +144,10 @@
 .ForgatPassword {
     text-align: right;
     margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .signupForm {
+        top: 41%;
+    }
 }

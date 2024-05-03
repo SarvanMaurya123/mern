@@ -6,7 +6,7 @@ body {
 /* ResetPassword.css */
 
 .reset-password-container {
-    max-width: 400px;
+    min-width: 400px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
@@ -15,6 +15,11 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
     margin-bottom: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
 }
 
 .reset-password-container h2 {
@@ -73,13 +78,18 @@ input[type="password"] {
 .forget-password-container {
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
     margin-bottom: 30px;
     background: linear-gradient(-60deg, #ef6f4065, #4dc6f275);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
 }
 
 .forget-password-container h2 {
@@ -110,7 +120,7 @@ input[type="email"] {
 }
 
 .send-email-button {
-    padding: 10px;
+    padding: 10px 150px;
     background-color: #ef6f40;
     color: #ffffff;
     border: none;
@@ -265,5 +275,20 @@ button:hover {
     .slidecartbox img {
         margin-left: 20%;
         width: 80px;
+    }
+
+    .forget-password-container {
+        top: 40%;
+    }
+
+    .send-email-button {
+        min-width: 346px;
+        padding: 10px 0px;
+    }
+
+    .reset-password-container {
+        top: 40%;
+        padding: 20px;
+        min-width: 420px;
     }
 }

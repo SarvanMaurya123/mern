@@ -30,7 +30,7 @@ const Home = () => {
                     </li>
                 </ul>
             </div>
-            <section className={styles.headersection}>
+            <section className={styles.headersection1}>
                 <img src="/Programing.jpg" alt="Programming" />
                 <div className={styles.homehadding}>
                     <h1>Welcome to <span className={styles.name}>{isLoggedIn && user ? user.username : ''}</span> my website</h1>

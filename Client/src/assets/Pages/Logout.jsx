@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../ContextApi/ContApi';
 import axios from 'axios';
 import styles from "../Component/Header.module.css";
-
+import { BACKEND } from '../../Url';
 const Logout = () => {
     const navigate = useNavigate();
     const { token, logout } = useAuth(); // Assuming you have a token stored in your auth context
@@ -11,7 +11,7 @@ const Logout = () => {
     const handleLogout = async () => {
         try {
             await axios.post(
-                `http://localhost:5000/Api/v1/Logout/LogoutUser`,
+                `${BACKEND}/Api/v1/Logout/LogoutUser`,
                 {},
                 {
                     headers: {
